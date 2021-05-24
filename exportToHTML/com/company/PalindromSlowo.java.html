@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>PalindromSlowo.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #cc7832;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+PalindromSlowo.java</font>
+</center></td></tr></table>
+<pre>
+<span class="s1">package </span><span class="s0">com.company</span><span class="s1">;</span>
+
+<span class="s1">public class </span><span class="s0">PalindromSlowo {</span>
+
+    <span class="s1">public static boolean </span><span class="s0">czyPalindrom1(String s){</span>
+        <span class="s1">for</span><span class="s0">(</span><span class="s1">int </span><span class="s0">i = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">i&lt; s.length()/</span><span class="s2">2</span><span class="s1">; </span><span class="s0">i++){</span>
+            <span class="s1">if</span><span class="s0">(s.charAt(i) != s.charAt(s.length()-</span><span class="s2">1 </span><span class="s0">- i)){</span>
+                <span class="s1">return false;</span>
+            <span class="s0">}</span>
+        <span class="s0">}</span>
+        <span class="s1">return true;</span>
+    <span class="s0">}</span>
+    <span class="s1">public static boolean </span><span class="s0">czyPalindrom2(String s) {</span>
+        <span class="s0">String s1 = </span><span class="s3">&quot;&quot;</span><span class="s1">;</span>
+        <span class="s1">for</span><span class="s0">(</span><span class="s1">int </span><span class="s0">i = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">i&lt; s.length()</span><span class="s1">; </span><span class="s0">i++){</span>
+            <span class="s0">s1 = s.charAt(i) + s1</span><span class="s1">;</span>
+        <span class="s0">}</span>
+        <span class="s1">return </span><span class="s0">s.equals(s1)</span><span class="s1">;</span>
+    <span class="s0">}</span>
+    <span class="s1">public static void </span><span class="s0">main(String[] args){</span>
+
+        <span class="s1">char</span><span class="s0">[] litery = </span><span class="s3">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span><span class="s0">.toCharArray()</span><span class="s1">;</span>
+        <span class="s0">String s = </span><span class="s3">&quot;&quot;</span><span class="s1">;</span>
+        <span class="s1">int </span><span class="s0">los</span><span class="s1">;</span>
+        <span class="s1">int </span><span class="s0">dl</span><span class="s1">;</span>
+        <span class="s1">for</span><span class="s0">(</span><span class="s1">int </span><span class="s0">j=</span><span class="s2">0</span><span class="s1">; </span><span class="s0">j&lt;</span><span class="s2">10</span><span class="s1">;</span><span class="s0">j++) {</span>
+            <span class="s0">s=</span><span class="s3">&quot;&quot;</span><span class="s1">;</span>
+            <span class="s0">dl = (</span><span class="s1">int</span><span class="s0">) (Math.random() * </span><span class="s2">21</span><span class="s0">)</span><span class="s1">;</span>
+            <span class="s1">if </span><span class="s0">(dl % </span><span class="s2">2 </span><span class="s0">== </span><span class="s2">1</span><span class="s0">)</span>
+                <span class="s0">s += litery[(</span><span class="s1">int</span><span class="s0">) (Math.random() * litery.length)]</span><span class="s1">;</span>
+            <span class="s1">for </span><span class="s0">(</span><span class="s1">int </span><span class="s0">i = </span><span class="s2">0</span><span class="s1">; </span><span class="s0">i &lt; dl / </span><span class="s2">2</span><span class="s1">; </span><span class="s0">i++) {</span>
+                <span class="s0">los = (</span><span class="s1">int</span><span class="s0">) (Math.random() * litery.length)</span><span class="s1">;</span>
+                <span class="s0">s = litery[los] + s + litery[los]</span><span class="s1">;</span>
+            <span class="s0">}</span>
+            <span class="s0">System.out.println(s)</span><span class="s1">;</span>
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+
+<span class="s0">}</span>
+</pre>
+</body>
+</html>

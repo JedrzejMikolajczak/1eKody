@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>SortowaniePrzezWybor.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+SortowaniePrzezWybor.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.company</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">SortowaniePrzezWybor {</span>
+
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+
+        <span class="s0">int</span><span class="s1">[] wartosci = </span><span class="s0">new int</span><span class="s1">[</span><span class="s2">10</span><span class="s1">]</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">min = </span><span class="s2">1000</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">id = </span><span class="s2">0</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">c</span><span class="s0">;</span>
+        <span class="s0">for</span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s2">0</span><span class="s0">; </span><span class="s1">i &lt; </span><span class="s2">10 </span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s1">wartosci[i] = (</span><span class="s0">int</span><span class="s1">) (Math.random() * </span><span class="s2">60 </span><span class="s1">+ </span><span class="s2">27</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s2">0</span><span class="s0">; </span><span class="s1">i &lt; </span><span class="s2">9</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s1">min = wartosci[i]</span><span class="s0">;</span>
+            <span class="s1">id = i</span><span class="s0">;</span>
+            <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">j = i + </span><span class="s2">1</span><span class="s0">; </span><span class="s1">j &lt; </span><span class="s2">10</span><span class="s0">; </span><span class="s1">j++) {</span>
+                <span class="s0">if</span><span class="s1">(min &gt; wartosci[j]) {</span>
+                    <span class="s1">min = wartosci[j]</span><span class="s0">;</span>
+                    <span class="s1">id = j</span><span class="s0">;</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+            <span class="s1">c = wartosci[i]</span><span class="s0">;</span>
+            <span class="s1">wartosci[i] = min</span><span class="s0">;</span>
+            <span class="s1">wartosci[id] = c</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i: wartosci){</span>
+            <span class="s1">System.out.print(i + </span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
